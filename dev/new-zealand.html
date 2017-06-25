@@ -12,14 +12,27 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <script src="https://use.typekit.net/ruw6zse.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script src="https://use.fontawesome.com/8cbda4bf38.js"></script>
   </head>
 
   <body>
   	<section class="inner-page new-zealand">
   		<section class="section video-hero">
-  		<div id="video-background">
-  			<iframe src="https://player.vimeo.com/video/127360181?autoplay=1&loop=1&quality=1080p" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  		</div>
+  		<!--
+	  		<div id="video-background">
+	  			<iframe src="https://player.vimeo.com/video/127360181?autoplay=1&loop=1&quality=1080p" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	  		</div>
+	  		-->
+	  		<div id="player" class="player" data-property="{videoURL:'https://vimeo.com/127360181',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}"></div>
+	  		<div class="block-center">
+		  		<h1>Kia ora</h1>
+		  		<button class="button-player" onclick="jQuery('#player').v_toggle_play()">
+			  		<span class="fa-stack fa-3x">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-play fa-stack-1x fa-inverse"></i>
+					</span>
+				</button>
+			</div>
   		</section>
   		<section class="section home-with-you">
   			<div class="container-fluid">
@@ -146,5 +159,11 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="assets/js/jquery.mb.vimeo_player.js"></script>
+	<script type="text/javascript">
+		jQuery(function(){
+			jQuery("#player").vimeo_player();
+	    });
+	</script>
   </body>
 </html>
