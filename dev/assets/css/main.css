@@ -14,11 +14,23 @@ body {
     background-color: transparent;
     border-radius: 0;
     cursor: pointer; }
-  body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4, body .h5, body .h6 {
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6,
+  body .h1,
+  body .h2,
+  body .h3,
+  body .h4,
+  body .h5,
+  body .h6 {
     font-family: "Adelle sans", sans-serif;
     font-style: normal;
     font-weight: 900; }
-  body h2, body .h2 {
+  body h2,
+  body .h2 {
     font-size: 2.5rem; }
 
 .crn-lt:before {
@@ -287,7 +299,8 @@ body {
         top: -75px;
         right: 0;
         width: 60px;
-        height: 60px; }
+        height: 60px;
+        z-index: 10; }
       @media (min-width: 576px) {
         .special-day .picture.picture-3 {
           max-width: 54%; }
@@ -330,7 +343,8 @@ body {
 
 /* WEDDING REGISTRY SECTION */
 .wedding-registry {
-  position: relative; }
+  position: relative;
+  margin-top: 2rem; }
   @media (max-width: 767px) {
     .wedding-registry {
       margin-left: -15px;
@@ -347,7 +361,7 @@ body {
       left: 10%;
       max-width: 50%; }
   .wedding-registry .content {
-    padding: 20px;
+    padding: 60px 25px;
     text-align: center;
     /*
     @include media-breakpoint-only(sm) {
@@ -566,14 +580,16 @@ body {
     left: -37px; }
   .legs:after {
     right: -37px; }
-  .legs .left, .legs .right {
+  .legs .left,
+  .legs .right {
     display: inline;
     width: 12px;
     height: 55px;
     background: #4A4A4A;
     position: absolute;
     bottom: 0; }
-    .legs .left:before, .legs .right:before {
+    .legs .left:before,
+    .legs .right:before {
       content: '';
       width: 28px;
       height: 12px;
