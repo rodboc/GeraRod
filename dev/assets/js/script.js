@@ -1,6 +1,9 @@
 $( document ).ready(function() {
-    
-    $("#player").vimeo_player();
+    options = {
+        autoplay: true,
+        controls: ['play-large']
+    };
+    plyr.setup(options);
 
     var s = skrollr.init({
         smoothScrolling: true
