@@ -201,8 +201,9 @@ body {
     &.button-nz {
       @include media-breakpoint-up(lg) {
         right: 50px;
-      }
-    }
+      		}
+    	}
+	}
 }
 // INNER PAGES
 .section {
