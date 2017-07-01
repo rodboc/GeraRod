@@ -425,6 +425,20 @@ body {
 // THE GROOMS SECTION
 .the-grooms {
     padding: 6rem 0;
+    .title {
+    	color: $white;
+    	position: absolute;
+    	left: 50%;
+    	bottom: 4%;
+	    -webkit-transform: translateX(-50%);
+	    -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	    -o-transform: translateX(-50%);
+	    transform: translateX(-50%);
+    	&:after {
+    		background-color: $white;
+    	}
+    }
 }
 
 // THE BIG DAY SECTION
@@ -459,10 +473,7 @@ body {
         }
     }
 }
-
-
 /* WEDDING REGISTRY SECTION */
-
 .wedding-registry {
     position: relative;
     margin-top: 2rem;
