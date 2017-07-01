@@ -170,22 +170,41 @@ body {
 
 // HOME
 .home {
-    height: 100vh;
-    >.container {
-        height: 100vh;
-        >.row {
-            height: 100vh;
-        }
+	height: 100vh;
+	> .container {
+		height: 100vh;
+		> .row {
+			height: 100vh;
+		}
+	}
+  .button {
+    text-align: center;
+    width: 110px;
+    @include media-breakpoint-up(sm) {
+      height: 76px;
+      font-size: 2.5rem;
+      width: 170px;
     }
-    .button {
-        @include media-breakpoint-up(sm) {
-            height: 76px;
-            width: 170px;
-            font-size: 2.5rem;
-        }
+    @include media-breakpoint-up(lg) {
+      position: absolute;
     }
+    @include media-breakpoint-down(lg) {
+      margin: 0 10px;
+    }
+    &.button-chile,
+    &.button-nz {}
+    &.button-chile {
+      @include media-breakpoint-up(lg) {
+        left: 50px;
+      }
+    }
+    &.button-nz {
+      @include media-breakpoint-up(lg) {
+        right: 50px;
+      		}
+    	}
+	}
 }
-
 // INNER PAGES
 .section {
     height: 100vh;
@@ -406,6 +425,20 @@ body {
 // THE GROOMS SECTION
 .the-grooms {
     padding: 6rem 0;
+    .title {
+    	color: $white;
+    	position: absolute;
+    	left: 50%;
+    	bottom: 4%;
+	    -webkit-transform: translateX(-50%);
+	    -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	    -o-transform: translateX(-50%);
+	    transform: translateX(-50%);
+    	&:after {
+    		background-color: $white;
+    	}
+    }
 }
 
 // THE BIG DAY SECTION
@@ -440,10 +473,7 @@ body {
         }
     }
 }
-
-
 /* WEDDING REGISTRY SECTION */
-
 .wedding-registry {
     position: relative;
     margin-top: 2rem;
