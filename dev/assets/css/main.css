@@ -936,6 +936,18 @@ body {
 
 .the-grooms {
   padding: 6rem 0; }
+  .the-grooms .title {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .the-grooms .title:after {
+      background-color: #fff; }
 
 .the-big-day {
   background: url(../img/bg-the-big-day.png) center center no-repeat #BB9457;
