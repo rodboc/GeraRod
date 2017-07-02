@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     options = {
         autoplay: true,
@@ -9,11 +10,10 @@ $(document).ready(function () {
         smoothScrolling: true
     });
     if (s.isMobile()) {
+        alert('parah!');
         s.destroy();
     }
-
-
-    const $cont = $('.cont');
+    const $cont = $('.our-pictures');
     const $slider = $('.slider');
     const $nav = $('.nav');
     const winW = $(window).width();
@@ -28,7 +28,7 @@ $(document).ready(function () {
     let numOfCities = arrCities.length;
     let arrCitiesDivided = [];
 
-    arrCities.map((city) => {
+    arrCities.map(city => {
         let length = city.length;
         let letters = Math.floor(length / 4);
         let exp = new RegExp(".{1," + letters + "}", "g");
@@ -42,22 +42,17 @@ $(document).ready(function () {
         const numSlide = arrCities.indexOf(arrCities[city]) + 1;
         const firstLetter = arrCitiesDivided[city][0].charAt(0);
 
-        const $slide =
-            $(
-                `<div data-target="${numSlide}" class="slide slide--${numSlide}">
+        const $slide = $(`<div data-target="${numSlide}" class="slide slide--${numSlide}">
 							<div class="slide__darkbg slide--${numSlide}__darkbg"></div>
 							<div class="slide__text-wrapper slide--${numSlide}__text-wrapper"></div>
-						</div>`
-            );
+						</div>`);
 
-        const letter =
-            $(`<div class="slide__letter slide--${numSlide}__letter">
+        const letter = $(`<div class="slide__letter slide--${numSlide}__letter">
 							${firstLetter}
 						</div>`);
 
         for (let i = 0, length = arrCitiesDivided[city].length; i < length; i++) {
-            const text =
-                $(`<div class="slide__text slide__text--${i + 1}">
+            const text = $(`<div class="slide__text slide__text--${i + 1}">
 								${arrCitiesDivided[city][i]}
 							</div>`);
             frag1.append(text);
@@ -96,15 +91,15 @@ $(document).ready(function () {
         diff = 0;
         $slider.addClass('animation');
         $slider.css({
-            'transform': 'translate3d(-' + ((curSlide - direction) * 100) + '%, 0, 0)'
+            'transform': 'translate3d(-' + (curSlide - direction) * 100 + '%, 0, 0)'
         });
 
         $slider.find('.slide__darkbg').css({
-            'transform': 'translate3d(' + ((curSlide - direction) * 50) + '%, 0, 0)'
+            'transform': 'translate3d(' + (curSlide - direction) * 50 + '%, 0, 0)'
         });
 
         $slider.find('.slide__letter').css({
-            'transform': 'translate3d(0, 0, 0)',
+            'transform': 'translate3d(0, 0, 0)'
         });
 
         $slider.find('.slide__text').css({
@@ -146,22 +141,22 @@ $(document).ready(function () {
             if (target === 1 && diff < 0 || target === numOfCities && diff > 0) return;
 
             $slider.css({
-                'transform': 'translate3d(-' + ((curSlide - 1) * 100 + (diff / 30)) + '%, 0, 0)'
+                'transform': 'translate3d(-' + ((curSlide - 1) * 100 + diff / 30) + '%, 0, 0)'
             });
 
             $slider.find('.slide__darkbg').css({
-                'transform': 'translate3d(' + ((curSlide - 1) * 50 + (diff / 60)) + '%, 0, 0)'
+                'transform': 'translate3d(' + ((curSlide - 1) * 50 + diff / 60) + '%, 0, 0)'
             });
 
             $slider.find('.slide__letter').css({
-                'transform': 'translate3d(' + (diff / 60) + 'vw, 0, 0)',
+                'transform': 'translate3d(' + diff / 60 + 'vw, 0, 0)'
             });
 
             $slider.find('.slide__text').css({
-                'transform': 'translate3d(' + (diff / 15) + 'px, 0, 0)'
+                'transform': 'translate3d(' + diff / 15 + 'px, 0, 0)'
             });
-        })
-    })
+        });
+    });
 
     $(document).on('mouseup touchend', function (e) {
         $(document).off('mousemove touchmove');
@@ -195,14 +190,4 @@ $(document).ready(function () {
         if (e.which === 39) navigateRight();
         if (e.which === 37) navigateLeft();
     });
-
-    $(document).on('mousewheel DOMMouseScroll', function (e) {
-        // 	if (animation) return;
-        // let delta = e.originalEvent.wheelDelta;
-
-        // if (delta > 0 || e.originalEvent.detail < 0) navigateLeft();
-        //  	if (delta < 0 || e.originalEvent.detail > 0) navigateRight();
-    });
 });
-
-
