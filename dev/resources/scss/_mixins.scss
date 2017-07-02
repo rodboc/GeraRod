@@ -33,3 +33,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}

@@ -1551,6 +1551,19 @@ body {
   100% {
     transform: rotate(40deg); } }
 
+.error .the-grooms .title {
+  bottom: auto; }
+
+.error .special-day {
+  margin: 0; }
+
+.error a {
+  color: #BB9457;
+  transition: all 0.3s; }
+  .error a:hover {
+    color: #7a5e32;
+    text-decoration: none; }
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;

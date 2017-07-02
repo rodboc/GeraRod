@@ -876,3 +876,23 @@ body {
         transform: rotate(40deg);
     }
 }
+
+.error {
+    .the-grooms {
+        .title {
+            bottom: auto;
+        }
+    }
+    .special-day {
+        margin: 0;
+    }
+    a {
+        color: $gold;
+        @include transition(all .3s);
+        &:hover {
+            color: darken($gold, 20%);
+            text-decoration: none;
+            
+        }
+    }
+}
