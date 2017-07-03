@@ -1,9 +1,9 @@
-$bgClr: rgba(#fff, 0);
-$txtClr: #fff;
+$bgClr: rgba($gold, 0);
+$txtClr: $gold;
 $animSpd: 750 * 1ms; // Change also in JS
 $numOfSlides: 5; // Add new city in the array in JS and a new image below
 $bgPics: ( url('/assets/img/gera-rod-slider-01.jpg') center center no-repeat,
-url('/assets/img/gera-rod-slider-02.jpg') center center no-repeat,
+url('/assets/img/gera-rod-slider-02.jpg') bottom center no-repeat,
 url('/assets/img/gera-rod-slider-03.jpg') center center no-repeat,
 url('/assets/img/gera-rod-slider-04.jpg') center center no-repeat,
 url('/assets/img/gera-rod-slider-05.jpg') center center no-repeat);
@@ -80,7 +80,7 @@ url('/assets/img/gera-rod-slider-05.jpg') center center no-repeat);
         width: 100%;
         height: 100%;
         transform: translate3d(0, 0, 0);
-        -webkit-text-fill-color: rgba(255, 255, 255, .5) !important;
+        -webkit-text-fill-color: rgba($gold, .5) !important;
         -webkit-background-clip: text !important;
         font: {
             size: 50vw;
@@ -154,7 +154,7 @@ url('/assets/img/gera-rod-slider-05.jpg') center center no-repeat);
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        border: 1px solid #fff;
+        border: 2px solid lighten($gold, 10%);
         margin-left: 10px;
         cursor: pointer;
         @include mediaMaxW(400px) {
@@ -174,7 +174,7 @@ url('/assets/img/gera-rod-slider-05.jpg') center center no-repeat);
             width: 75%;
             height: 75%;
             border-radius: 50%;
-            background-color: #fff;
+            background-color: lighten($gold, 10%);
             opacity: 0;
             transition: 300ms;
         }
