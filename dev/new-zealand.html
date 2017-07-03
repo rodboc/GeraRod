@@ -17,7 +17,7 @@
 			Typekit.load({
 				async: true
 			});
-		} catch (e) { }
+		} catch (e) {}
 		if (/MSIE 10/i.test(navigator.userAgent) || (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent))) {
 			window.location = "/sorry-ie.html";
 		}
@@ -28,13 +28,17 @@
 <body>
 	<section class="inner-page new-zealand">
 		<section class="section video-hero">
-			<video class="player" poster="assets/img/video-poster.jpg">
-				<source src="assets/video/new-zealand.mp4" type="video/mp4">
-				<source src="assets/video/new-zealand.webm" type="video/webm">
+			<video playsinline autoplay muted loop poster="/assets/img/video-poster.jpg" id="bgvid">
+				<source src="/assets/video/new-zealand.webm" type="video/webm">
+				<source src="/assets/video/new-zealand.mp4" type="video/mp4">
 			</video>
 			<div class="block-center">
-				<h1>Kia ora</h1>
+				<span class="lead h1 title">Welcome to our wedding</span>
 			</div>
+			<div class="credits">
+				<p><a href="https://vimeo.com/127360181" target="_blank">Video by BenSteensels</a></p>
+			</div>
+			<div class="scroll"><i class="fa fa-angle-down fa-4x bounce" aria-hidden="true"></i></div>
 		</section>
 		<section class="section home-with-you">
 			<div class="container-fluid">
@@ -114,7 +118,7 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae semper nulla. Aliquam sed porttitor diam. Class
 									aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 								<p> <a href="https://www.regalanovios.com/listas/ver/1613" target="_blank" class="button">Chile</a> <a href="https://honeypotregistry.co.nz/Registry/Live/f2e62d5f-97d5-4cbf-9ce0-c4559c425d03"
-									 target="_blank" class="button">New Zealand</a> </p>
+									    target="_blank" class="button">New Zealand</a> </p>
 							</div>
 						</section>
 						</div>
@@ -165,12 +169,11 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-	 crossorigin="anonymous"></script>
+	    crossorigin="anonymous"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 	<script src="/assets/js/skrollr.js"></script>
-	<script src="https://cdn.plyr.io/2.0.13/plyr.js"></script>
 	<script src="/assets/js/script.js"></script>
 </body>
 
