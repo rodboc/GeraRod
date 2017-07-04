@@ -219,7 +219,8 @@ body {
 .video-hero {
     padding: 0;
     position: relative;
-    background: rgba($gold, 0.8);
+    background: rgba($gold, 0.6);
+    overflow: hidden;
     #bgvid {
         position: relative;
         top: 50%;
@@ -299,41 +300,12 @@ body {
         -moz-transform: translate(-50%, -20%);
         -ms-transform: translate(-50%, -20%);
         -o-transform: translate(-50%, -20%);
-        transform: translate(-50%, -20%); // -webkit-animation-name: slideInDown;
-        // animation-name: slideInDown;
-        // -webkit-animation-duration: 4s;
-        // animation-duration: 4s;
-        // -webkit-animation-fill-mode: both;
-        // @-webkit-keyframes slideInDown {
-        //     0% {
-        //         visibility: visible;
-        //         opacity: 1;
-        //     }
-        //     30% {
-        //         opacity: 1;
-        //     }
-        //     80% {
-        //         opacity: 1;
-        //     }
-        //     100% {
-        //         opacity: 0;
-        //     }
-        // }
-        // @keyframes slideInDown {
-        //     0% {
-        //         visibility: visible;
-        //         opacity: 1;
-        //     }
-        //     30% {
-        //         opacity: 1;
-        //     }
-        //     80% {
-        //         opacity: 1;
-        //     }
-        //     100% {
-        //         opacity: 0;
-        //     }
-        // }
+        transform: translate(-50%, -20%);
+        img {
+            width: 100%;
+            min-width: 400px;
+            height: 100%;
+        }
         .lead {
             color: $white;
             display: block;
@@ -587,7 +559,17 @@ body {
     }
 }
 
-
+.copyright {
+    a {
+        color: $white;
+        font-size: 0.85rem;
+        @include transition(all 0.3s);
+        &:hover {
+            color: $white;
+            opacity: 0.8;
+        }
+    }
+}
 /* TANGO */
 
 .tango-approve {
@@ -596,7 +578,7 @@ body {
     font-size: 1.5rem;
     border-bottom: 40px solid $gold;
     @include media-breakpoint-up(sm) {
-        border-bottom-width: 120px;
+        border-bottom-width: 60px;
     }
     .row {
         height: 500px;

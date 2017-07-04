@@ -1006,7 +1006,8 @@ body {
 .video-hero {
   padding: 0;
   position: relative;
-  background: rgba(187, 148, 87, 0.8); }
+  background: rgba(187, 148, 87, 0.6);
+  overflow: hidden; }
   .video-hero #bgvid {
     position: relative;
     top: 50%;
@@ -1077,6 +1078,10 @@ body {
     -ms-transform: translate(-50%, -20%);
     -o-transform: translate(-50%, -20%);
     transform: translate(-50%, -20%); }
+    .video-hero .block-center img {
+      width: 100%;
+      min-width: 400px;
+      height: 100%; }
     .video-hero .block-center .lead {
       color: #fff;
       display: block;
@@ -1276,6 +1281,14 @@ body {
             border-color: #fff;
             color: #BB9457; } }
 
+.copyright a {
+  color: #fff;
+  font-size: 0.85rem;
+  transition: all 0.3s; }
+  .copyright a:hover {
+    color: #fff;
+    opacity: 0.8; }
+
 /* TANGO */
 .tango-approve {
   background-color: #fff;
@@ -1284,7 +1297,7 @@ body {
   border-bottom: 40px solid #BB9457; }
   @media (min-width: 576px) {
     .tango-approve {
-      border-bottom-width: 120px; } }
+      border-bottom-width: 60px; } }
   .tango-approve .row {
     height: 500px; }
     @media (min-width: 576px) {
