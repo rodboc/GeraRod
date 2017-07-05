@@ -11,11 +11,34 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="http://gerarod.com/assets/img/wedding-registry-2.jpg" />
 	<meta property="og:url" content="http://gerarod.com" />
-	<meta property="og:description" content="Nos vamos a casar en este increíble lugar llamado Nueva Zelanda."/>
+	<meta property="og:description" content="Nos vamos a casar en este increíble lugar llamado Nueva Zelanda." />
 	<!-- Bootstrap core CSS -->
 	<link href="assets/css/main.css" rel="stylesheet">
 	<script src="https://use.typekit.net/ruw6zse.js"></script>
 	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-91316220-1', 'auto');
+		ga('send', 'pageview');
+
+		window['_fs_debug'] = false;
+		window['_fs_host'] = 'fullstory.com';
+		window['_fs_org'] = '5GSM7';
+		window['_fs_namespace'] = 'FS';
+		(function(m,n,e,t,l,o,g,y){
+			if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+			g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+			o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+			y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+			g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+			g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+			g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+			d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+			';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+		})(window,document,window['_fs_namespace'],'script','user');
 		try {
 			Typekit.load({
 				async: true
@@ -36,10 +59,16 @@
 				<source src="/assets/video/new-zealand.mp4" type="video/mp4">
 			</video>
 			<div class="block-center">
-				<img src="/assets/img/bienvenido.svg" alt="Bienvenido a nuestro Matrimonio" class="img-fluid">
+				<img src="/assets/img/bienvenido.svg" alt="Welcome to our Wedding" class="img-fluid">
+				<button id="btn__play" class="btn button-player">
+			  		<span class="fa-stack fa-3x">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="icon fa fa-volume-up fa-stack-1x fa-inverse"></i>
+					</span>
+				</button>
 			</div>
 			<div class="credits">
-				<p><a href="https://vimeo.com/127360181" target="_blank" rel="nofollow">Muchas gracias BenSteensels</a></p>
+				<p><a href="https://vimeo.com/127360181" target="_blank" rel="nofollow">Muchas gracias BenSteensels por el video</a></p>
 			</div>
 			<div class="scroll"><i class="fa fa-angle-down fa-4x bounce" aria-hidden="true"></i></div>
 		</section>
@@ -92,7 +121,8 @@
 							<div class="content">
 								<div>
 									<p>
-										<div>Nos casaremos en rústico y fantástico Kumeu Valley State en el comienzo de la primavera, donde Nueva Zelanda se llena de días soleados y coloridos.
+										<div>Nos casaremos en rústico y fantástico Kumeu Valley State en el comienzo de la primavera, donde Nueva Zelanda se
+											llena de días soleados y coloridos.
 											<div>
 									</p>
 									</div>
@@ -117,10 +147,10 @@
 								<img class="img-fluid" src="assets/img/wedding-registry-2.jpg"> </div>
 							<div class="content" data-bottom-top="transform: translateY(5%);" data-top-bottom="transform: translateY(-15%);">
 								<h2 class="title">Lista de novios</h2>
-								<p>Nos encanta estar junto a ustedes para disfrutar juntos este día tan especial, pero también disfrutamos otras cosas, ¡como regalos!. Si realmente quieres entreganos un regalo, puedes encontrar algunas idead aquí:</p>
+								<p>Nos encanta estar junto a ustedes para disfrutar juntos este día tan especial, pero también disfrutamos otras cosas,
+									¡como regalos!. Si realmente quieres entreganos un regalo, puedes encontrar algunas idead aquí:</p>
 								<p> <a href="https://www.regalanovios.com/listas/ver/1613" target="_blank" class="button" rel="nofollow">Chile</a>
-									<a
-									 href="https://honeypotregistry.co.nz/Registry/Live/f2e62d5f-97d5-4cbf-9ce0-c4559c425d03" target="_blank" class="button"
+									<a href="https://honeypotregistry.co.nz/Registry/Live/f2e62d5f-97d5-4cbf-9ce0-c4559c425d03" target="_blank" class="button"
 									 rel="nofollow">Nueva Zelanda</a>
 								</p>
 							</div>
