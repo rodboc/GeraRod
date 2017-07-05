@@ -19,7 +19,6 @@ $(document).ready(function () {
         smoothScrolling: true
     });
     if (s.isMobile()) {
-        alert('parah!');
         s.destroy();
     }
     const $cont = $('.our-pictures');
@@ -33,7 +32,7 @@ $(document).ready(function () {
     let diff = 0;
 
     // Generating slides
-    let arrCities = ['Gera & Rod', 'September', '2017', 'Auckland', 'New Zealand']; // Change number of slides in CSS also
+    let arrCities = ['Gera & Rod', 'September', '2017', 'Auckland', 'New Zealand'];
     let numOfCities = arrCities.length;
     let arrCitiesDivided = [];
 
