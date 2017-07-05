@@ -155,11 +155,9 @@ body {
     }
     .button {
         text-align: center;
-        width: 110px;
         @include media-breakpoint-up(sm) {
             height: 76px;
             font-size: 2.5rem;
-            width: 170px;
         }
         @include media-breakpoint-up(lg) {
             position: absolute;
@@ -223,19 +221,27 @@ body {
     overflow: hidden;
     #bgvid {
         position: relative;
-        top: 50%;
+        top: 45%;
         left: 50%;
         min-width: 100%;
         min-height: 100%;
         width: auto;
         height: auto;
         z-index: -100;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-45%);
+        -moz-transform: translateX(-50%) translateY(-45%);
+        -webkit-transform: translateX(-50%) translateY(-45%);
+        transform: translateX(-50%) translateY(-45%);
         background: url('/assets/img/video-poster.jpg') no-repeat;
         background-size: cover;
+    }
+    .button-player {
+        border: 0;
+        margin: 1.5rem 0;
+        background: transparent;
+        .fa-circle {
+            color: $gold;
+        }
     }
     .credits {
         position: absolute;
