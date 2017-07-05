@@ -155,11 +155,9 @@ body {
     }
     .button {
         text-align: center;
-        width: 110px;
         @include media-breakpoint-up(sm) {
             height: 76px;
             font-size: 2.5rem;
-            width: 170px;
         }
         @include media-breakpoint-up(lg) {
             position: absolute;

@@ -1,5 +1,7 @@
 
 $(document).ready(function () {
+    $("img").lazyload();
+
     var s = skrollr.init({
         smoothScrolling: true
     });
