@@ -662,9 +662,9 @@
     z-index: 1; }
   .slide--1__darkbg {
     left: 0%;
-    background: url("/assets/img/gera-rod-slider-01.jpg") center center no-repeat;
+    background: url("/assets/img/gera-rod-slider-01.jpg");
     background-size: cover;
-    background-position: 0px center, 0px center;
+    background-position: center center;
     transform: translate3d(0, 0, 0);
     will-change: transform; }
     .slide--1__darkbg:after {
@@ -676,14 +676,14 @@
       height: 100%;
       background-color: rgba(187, 148, 87, 0); }
   .slide--1__letter {
-    background: url("/assets/img/gera-rod-slider-01.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
+    background: url("/assets/img/gera-rod-slider-01.jpg");
+    background-position: center center;
     background-size: cover; }
   .slide--2__darkbg {
     left: -50%;
-    background: url("/assets/img/gera-rod-slider-02.jpg") bottom center no-repeat;
+    background: url("/assets/img/gera-rod-slider-02.jpg");
     background-size: cover;
-    background-position: 0px center, 0px center;
+    background-position: center center;
     transform: translate3d(0, 0, 0);
     will-change: transform; }
     .slide--2__darkbg:after {
@@ -695,14 +695,14 @@
       height: 100%;
       background-color: rgba(187, 148, 87, 0); }
   .slide--2__letter {
-    background: url("/assets/img/gera-rod-slider-02.jpg") bottom center no-repeat;
-    background-position: 0px center, 0px center;
+    background: url("/assets/img/gera-rod-slider-02.jpg");
+    background-position: center center;
     background-size: cover; }
   .slide--3__darkbg {
     left: -100%;
-    background: url("/assets/img/gera-rod-slider-03.jpg") center center no-repeat;
+    background: url("/assets/img/gera-rod-slider-03.jpg");
     background-size: cover;
-    background-position: 0px center, 0px center;
+    background-position: center center;
     transform: translate3d(0, 0, 0);
     will-change: transform; }
     .slide--3__darkbg:after {
@@ -714,14 +714,14 @@
       height: 100%;
       background-color: rgba(187, 148, 87, 0); }
   .slide--3__letter {
-    background: url("/assets/img/gera-rod-slider-03.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
+    background: url("/assets/img/gera-rod-slider-03.jpg");
+    background-position: center center;
     background-size: cover; }
   .slide--4__darkbg {
     left: -150%;
-    background: url("/assets/img/gera-rod-slider-04.jpg") center center no-repeat;
+    background: url("/assets/img/gera-rod-slider-04.jpg");
     background-size: cover;
-    background-position: 0px center, 0px center;
+    background-position: center center;
     transform: translate3d(0, 0, 0);
     will-change: transform; }
     .slide--4__darkbg:after {
@@ -733,14 +733,14 @@
       height: 100%;
       background-color: rgba(187, 148, 87, 0); }
   .slide--4__letter {
-    background: url("/assets/img/gera-rod-slider-04.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
+    background: url("/assets/img/gera-rod-slider-04.jpg");
+    background-position: center center;
     background-size: cover; }
   .slide--5__darkbg {
     left: -200%;
-    background: url("/assets/img/gera-rod-slider-05.jpg") center center no-repeat;
+    background: url("/assets/img/gera-rod-slider-05.jpg");
     background-size: cover;
-    background-position: 0px center, 0px center;
+    background-position: center center;
     transform: translate3d(0, 0, 0);
     will-change: transform; }
     .slide--5__darkbg:after {
@@ -752,8 +752,8 @@
       height: 100%;
       background-color: rgba(187, 148, 87, 0); }
   .slide--5__letter {
-    background: url("/assets/img/gera-rod-slider-05.jpg") center center no-repeat;
-    background-position: 0px center, 0px center;
+    background: url("/assets/img/gera-rod-slider-05.jpg");
+    background-position: center center;
     background-size: cover; }
 
 .nav {
@@ -973,8 +973,10 @@ body {
         right: 50px; } }
 
 .section {
-  height: 100vh;
   padding: 5vh 0; }
+  @media (min-width: 768px) {
+    .section {
+      height: 100vh; } }
   .section .container,
   .section .container-fluid,
   .section .row {
@@ -1006,6 +1008,9 @@ body {
   position: relative;
   background: rgba(187, 148, 87, 0.6);
   overflow: hidden; }
+  @media (max-width: 991px) {
+    .video-hero {
+      height: 100vh; } }
   .video-hero #bgvid {
     position: relative;
     top: 45%;
@@ -1027,10 +1032,25 @@ body {
     background: transparent; }
     .video-hero .button-player .fa-circle {
       color: #BB9457; }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .video-hero .button-player {
+    position: absolute;
+    right: -160px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); } }
   .video-hero .credits {
     position: absolute;
     bottom: 2rem;
     right: 2rem; }
+    @media (max-width: 767px) {
+      .video-hero .credits {
+        right: 0;
+        left: 0;
+        text-align: center; } }
     .video-hero .credits a {
       color: #fff;
       text-transform: uppercase;
@@ -1086,6 +1106,9 @@ body {
       width: 100%;
       min-width: 400px;
       height: 100%; }
+      @media (max-width: 767px) {
+        .video-hero .block-center img {
+          min-width: 300px; } }
     .video-hero .block-center .lead {
       color: #fff;
       display: block;
@@ -1103,24 +1126,27 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed; }
+  @media (max-width: 991px) {
+    .home-with-you {
+      background-color: #BB9457;
+      height: 100vh; } }
   .home-with-you .home-with-you-content {
+    padding: 15px;
     text-align: center;
-    width: 100%; }
-    @media (min-width: 576px) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center !important; }
+    .home-with-you .home-with-you-content h2 {
+      width: 100%; }
+    @media (min-width: 768px) {
       .home-with-you .home-with-you-content {
         background: url(../img/bg-home-with-you-content.png) center center no-repeat;
         height: 620px;
-        padding: 14rem 8rem;
         width: 979px; } }
-    @media (min-width: 768px) {
-      .home-with-you .home-with-you-content {
-        padding: 14rem 12rem; } }
-    @media (min-width: 992px) {
-      .home-with-you .home-with-you-content {
-        padding: 14rem 16rem; } }
     .home-with-you .home-with-you-content h2 {
       color: #fff; }
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         .home-with-you .home-with-you-content h2 {
           font-size: 3.5rem; } }
 
@@ -1128,13 +1154,13 @@ body {
   background-color: #fff;
   font-size: 2rem;
   font-weight: 900; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .special-day .heading-1 {
       position: absolute;
       left: 15px;
       top: 6%;
       width: 26%; } }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .special-day .heading-2 {
       text-align: right;
       position: absolute;
@@ -1144,55 +1170,47 @@ body {
   @media (min-width: 992px) {
     .special-day .heading-2 {
       width: 26%; } }
-  .special-day .picture {
-    border: 15px solid #fff;
-    position: absolute; }
-    .special-day .picture.picture-1 {
-      top: -20px;
-      right: 15%;
-      max-width: 50%; }
-    .special-day .picture.picture-2 {
-      top: 20%;
-      right: 0;
-      max-width: 30%; }
-    .special-day .picture.picture-3 {
-      bottom: 0;
-      left: 0; }
-      .special-day .picture.picture-3:before {
-        border: 10px solid #BB9457;
-        content: '';
-        position: absolute;
-        top: -75px;
+  @media (min-width: 768px) {
+    .special-day .picture {
+      border: 15px solid #fff;
+      position: absolute; }
+      .special-day .picture.picture-1 {
+        top: -20px;
+        right: 15%;
+        max-width: 50%; }
+      .special-day .picture.picture-2 {
+        top: 20%;
         right: 0;
-        width: 60px;
-        height: 60px;
-        z-index: 10; }
-      @media (min-width: 576px) {
-        .special-day .picture.picture-3 {
-          max-width: 54%; }
-          .special-day .picture.picture-3:before {
-            border-width: 15px;
-            width: 100px;
-            height: 100px;
-            left: 0;
-            top: -125px; } }
+        max-width: 30%; }
+      .special-day .picture.picture-3 {
+        bottom: 0;
+        left: 0; }
+        .special-day .picture.picture-3:before {
+          border: 10px solid #BB9457;
+          content: '';
+          position: absolute;
+          top: -75px;
+          right: 0;
+          width: 60px;
+          height: 60px;
+          z-index: 10; } }
+    @media (min-width: 768px) and (min-width: 768px) {
+      .special-day .picture.picture-3 {
+        max-width: 54%; }
+        .special-day .picture.picture-3:before {
+          border-width: 15px;
+          width: 100px;
+          height: 100px;
+          left: 0;
+          top: -125px; } }
 
 .the-grooms {
-  padding: 6rem 0; }
+  padding: 2rem 0; }
+  @media (min-width: 576px) {
+    .the-grooms {
+      padding: 6rem 0; } }
   .the-grooms h2.title {
     color: #4A4A4A; }
-  .the-grooms .title {
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    bottom: 4%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%); }
-    .the-grooms .title:after {
-      background-color: #fff; }
   .the-grooms h3.title {
     font-size: 2.2rem;
     width: 100%;
@@ -1200,6 +1218,18 @@ body {
     transition: all 0.3s; }
   .the-grooms .col-sm-6 {
     transition: all 0.3s; }
+    .the-grooms .col-sm-6 .title {
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      bottom: 4%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+      .the-grooms .col-sm-6 .title:after {
+        background-color: #fff; }
     .the-grooms .col-sm-6:hover {
       -webkit-filter: brightness(120%); }
       .the-grooms .col-sm-6:hover .title {
@@ -1228,6 +1258,8 @@ body {
     @media (min-width: 992px) {
       .the-big-day .content {
         padding: 0 6rem; } }
+    .the-big-day .content .title {
+      margin-bottom: 2rem; }
     .the-big-day .content p {
       font-size: 1.75rem;
       font-weight: 900; }
@@ -1252,12 +1284,15 @@ body {
       left: 10%;
       max-width: 50%; }
   .wedding-registry .content {
-    padding: 60px 25px;
+    padding: 0 15px;
     text-align: center;
     /*
     @include media-breakpoint-only(sm) {
       background-color: lavender !important;
     }*/ }
+    @media (min-width: 576px) {
+      .wedding-registry .content {
+        padding: 60px 25px; } }
     .wedding-registry .content .button {
       display: block;
       margin: 2rem 0; }
@@ -1302,8 +1337,8 @@ body {
   @media (min-width: 576px) {
     .tango-approve {
       border-bottom-width: 60px; } }
-  .tango-approve .row {
-    height: 500px; }
+  .tango-approve .row .content {
+    padding: 2rem 0; }
     @media (min-width: 576px) {
       .tango-approve .row .content {
         padding: 8rem 0; } }
