@@ -1032,6 +1032,16 @@ body {
     background: transparent; }
     .video-hero .button-player .fa-circle {
       color: #BB9457; }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .video-hero .button-player {
+    position: absolute;
+    right: -160px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); } }
   .video-hero .credits {
     position: absolute;
     bottom: 2rem;
@@ -1118,6 +1128,7 @@ body {
   background-attachment: fixed; }
   @media (max-width: 991px) {
     .home-with-you {
+      background-color: #BB9457;
       height: 100vh; } }
   .home-with-you .home-with-you-content {
     padding: 15px;
@@ -1128,14 +1139,14 @@ body {
     align-items: center !important; }
     .home-with-you .home-with-you-content h2 {
       width: 100%; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       .home-with-you .home-with-you-content {
         background: url(../img/bg-home-with-you-content.png) center center no-repeat;
         height: 620px;
         width: 979px; } }
     .home-with-you .home-with-you-content h2 {
       color: #fff; }
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         .home-with-you .home-with-you-content h2 {
           font-size: 3.5rem; } }
 
@@ -1143,13 +1154,13 @@ body {
   background-color: #fff;
   font-size: 2rem;
   font-weight: 900; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .special-day .heading-1 {
       position: absolute;
       left: 15px;
       top: 6%;
       width: 26%; } }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .special-day .heading-2 {
       text-align: right;
       position: absolute;
@@ -1159,7 +1170,7 @@ body {
   @media (min-width: 992px) {
     .special-day .heading-2 {
       width: 26%; } }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .special-day .picture {
       border: 15px solid #fff;
       position: absolute; }
@@ -1183,7 +1194,7 @@ body {
           width: 60px;
           height: 60px;
           z-index: 10; } }
-    @media (min-width: 576px) and (min-width: 576px) {
+    @media (min-width: 768px) and (min-width: 768px) {
       .special-day .picture.picture-3 {
         max-width: 54%; }
         .special-day .picture.picture-3:before {
