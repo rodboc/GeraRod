@@ -240,6 +240,15 @@ body {
         .fa-circle {
             color: $gold;
         }
+        @include media-breakpoint-only(sm) {
+            position: absolute;
+            right: -160px;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
     }
     .credits {
         position: absolute;
@@ -343,6 +352,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     @include media-breakpoint-down(md) {
+        background-color: $gold;
 	    height: 100vh;
     }    	
     .home-with-you-content {
@@ -355,14 +365,14 @@ body {
         h2 {
             width: 100%;
         }
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             background: url(../img/bg-home-with-you-content.png) center center no-repeat;
             height: 620px;
             width: 979px;
         }
         h2 {
             color: $white;
-            @include media-breakpoint-up(sm) {
+            @include media-breakpoint-up(md) {
                 font-size: 3.5rem;
             }
         }
@@ -375,7 +385,7 @@ body {
     font-size: 2rem;
     font-weight: 900;
     .heading-1 {
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             position: absolute;
             left: 15px;
             top: 6%;
@@ -383,7 +393,7 @@ body {
         }
     }
     .heading-2 {
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             text-align: right;
             position: absolute;
             right: 15px;
@@ -395,7 +405,7 @@ body {
         }
     }
     .picture {
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
         border: 15px solid $white;
         position: absolute;
         &.picture-1 {
@@ -421,7 +431,7 @@ body {
                 height: 60px;
                 z-index: 10;
             }
-            @include media-breakpoint-up(sm) {
+            @include media-breakpoint-up(md) {
                 max-width: 54%;
                 &:before {
                     border-width: 15px;
