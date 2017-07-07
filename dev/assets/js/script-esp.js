@@ -4,13 +4,13 @@ $(document).ready(function () {
     $("#btn__play").click(function () {
         if ($("video").prop('muted')) {
             $("video").prop('muted', false);
-            $("#btn__play .icon").removeClass('fa-volume-up');
-            $("#btn__play .icon").addClass('fa-volume-off');
+            $("#btn__play .icon").removeClass('fa-volume-off');
+            $("#btn__play .icon").addClass('fa-volume-up');
 
         } else {
             $("video").prop('muted', true);
-            $("#btn__play .icon").removeClass('fa-volume-off');
-            $("#btn__play .icon").addClass('fa-volume-up');
+            $("#btn__play .icon").removeClass('fa-volume-up');
+            $("#btn__play .icon").addClass('fa-volume-off');
         }
     });
     $("img").lazyload();
