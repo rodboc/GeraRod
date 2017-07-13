@@ -1161,7 +1161,9 @@ body {
       position: absolute;
       left: 15px;
       top: 20px;
-      width: 26%; } }
+      width: 26%;
+      z-index: 10;
+      background: white; } }
   .special-day .square {
     border: 10px solid #BB9457;
     content: '';
@@ -1612,6 +1614,9 @@ body {
   .error a:hover {
     color: #7a5e32;
     text-decoration: none; }
+
+.scroll a, .scroll a:hover {
+  color: white; }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
