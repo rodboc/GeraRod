@@ -1162,6 +1162,22 @@ body {
       left: 15px;
       top: 20px;
       width: 26%; } }
+  .special-day .square {
+    border: 10px solid #BB9457;
+    content: '';
+    position: absolute;
+    top: -75px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 10; }
+    @media (min-width: 768px) {
+      .special-day .square {
+        border-width: 15px;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        top: -125px; } }
   @media (min-width: 768px) {
     .special-day .picture {
       border: 15px solid #fff;
@@ -1176,25 +1192,10 @@ body {
         max-width: 30%; }
       .special-day .picture.picture-3 {
         bottom: -40px;
-        left: 0; }
-        .special-day .picture.picture-3:before {
-          border: 10px solid #BB9457;
-          content: '';
-          position: absolute;
-          top: -75px;
-          right: 0;
-          width: 60px;
-          height: 60px;
-          z-index: 10; } }
+        left: 0; } }
     @media (min-width: 768px) and (min-width: 768px) {
       .special-day .picture.picture-3 {
-        max-width: 54%; }
-        .special-day .picture.picture-3:before {
-          border-width: 15px;
-          width: 100px;
-          height: 100px;
-          left: 0;
-          top: -125px; } }
+        max-width: 54%; } }
 
 .the-grooms {
   padding: 2rem 0; }

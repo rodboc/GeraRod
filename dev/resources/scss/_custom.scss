@@ -394,44 +394,44 @@ body {
             width: 26%;
         }
     }
+    .square {
+        border: 10px solid $gold;
+        content: '';
+        position: absolute;
+        top: -75px;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        z-index: 10;
+        @include media-breakpoint-up(md) {
+            border-width: 15px;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: -125px;
+        }
+    }
     .picture {
         @include media-breakpoint-up(md) {
-        border: 15px solid $white;
-        position: absolute;
-        &.picture-1 {
-            top: -20px;
-            right: 14%;
-            max-width: 54%;
-        }
-        &.picture-2 {
-            top: 20%;
-            right: 0;
-            max-width: 30%;
-        }
-        &.picture-3 {
-            bottom: -40px;
-            left: 0;
-            &:before {
-                border: 10px solid $gold;
-                content: '';
-                position: absolute;
-                top: -75px;
-                right: 0;
-                width: 60px;
-                height: 60px;
-                z-index: 10;
-            }
-            @include media-breakpoint-up(md) {
+            border: 15px solid $white;
+            position: absolute;
+            &.picture-1 {
+                top: -20px;
+                right: 14%;
                 max-width: 54%;
-                &:before {
-                    border-width: 15px;
-                    width: 100px;
-                    height: 100px;
-                    left: 0;
-                    top: -125px;
+            }
+            &.picture-2 {
+                top: 20%;
+                right: 0;
+                max-width: 30%;
+            }
+            &.picture-3 {
+                bottom: -40px;
+                left: 0;
+                @include media-breakpoint-up(md) {
+                    max-width: 54%;
                 }
             }
-        }
         }
     }
 }
