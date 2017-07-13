@@ -392,6 +392,8 @@ body {
             left: 15px;
             top: 20px;
             width: 26%;
+            z-index: 10;
+            background: white;
         }
     }
     .square {
@@ -946,5 +948,11 @@ body {
             color: darken($gold, 20%);
             text-decoration: none;
         }
+    }
+}
+
+.scroll {
+    a, a:hover {
+        color: white;
     }
 }

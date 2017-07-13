@@ -18,10 +18,15 @@
 	<script src="https://use.typekit.net/ruw6zse.js"></script>
 	<script>
 		(function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date(); a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 		ga('create', 'UA-91316220-1', 'auto');
@@ -32,17 +37,43 @@
 		window['_fs_org'] = '5GSM7';
 		window['_fs_namespace'] = 'FS';
 		(function (m, n, e, t, l, o, g, y) {
-			if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return; }
-			g = m[e] = function (a, b) { g.q ? g.q.push([a, b]) : g._api(a, b); }; g.q = [];
-			o = n.createElement(t); o.async = 1; o.src = 'https://' + _fs_host + '/s/fs.js';
-			y = n.getElementsByTagName(t)[0]; y.parentNode.insertBefore(o, y);
-			g.identify = function (i, v) { g(l, { uid: i }); if (v) g(l, v) }; g.setUserVars = function (v) { g(l, v) };
-			g.identifyAccount = function (i, v) { o = 'account'; v = v || {}; v.acctId = i; g(o, v) };
+			if (e in m && m.console && m.console.log) {
+				m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');
+				return;
+			}
+			g = m[e] = function (a, b) {
+				g.q ? g.q.push([a, b]) : g._api(a, b);
+			};
+			g.q = [];
+			o = n.createElement(t);
+			o.async = 1;
+			o.src = 'https://' + _fs_host + '/s/fs.js';
+			y = n.getElementsByTagName(t)[0];
+			y.parentNode.insertBefore(o, y);
+			g.identify = function (i, v) {
+				g(l, {
+					uid: i
+				});
+				if (v) g(l, v)
+			};
+			g.setUserVars = function (v) {
+				g(l, v)
+			};
+			g.identifyAccount = function (i, v) {
+				o = 'account';
+				v = v || {};
+				v.acctId = i;
+				g(o, v)
+			};
 			g.clearUserCookie = function (c, d, i) {
 				if (!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')) {
-					d = n.domain; while (1) {
-					n.cookie = 'fs_uid=;domain=' + d +
-						';path=/;expires=' + new Date(0).toUTCString(); i = d.indexOf('.'); if (i < 0) break; d = d.slice(i + 1)
+					d = n.domain;
+					while (1) {
+						n.cookie = 'fs_uid=;domain=' + d +
+							';path=/;expires=' + new Date(0).toUTCString();
+						i = d.indexOf('.');
+						if (i < 0) break;
+						d = d.slice(i + 1)
 					}
 				}
 			};
@@ -51,7 +82,7 @@
 			Typekit.load({
 				async: true
 			});
-		} catch (e) { }
+		} catch (e) {}
 		if (/MSIE 10/i.test(navigator.userAgent) || (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent))) {
 			window.location = "/sorry-ie.html";
 		}
@@ -78,9 +109,9 @@
 			<div class="credits">
 				<p><a href="https://vimeo.com/127360181" target="_blank" rel="nofollow">Special thanks to BenSteensels</a></p>
 			</div>
-			<div class="scroll"><i class="fa fa-angle-down fa-4x bounce" aria-hidden="true"></i></div>
+			<div class="scroll"><a href="#quote"><i class="fa fa-angle-down fa-4x bounce" aria-hidden="true"></i></a></div>
 		</section>
-		<section class="section home-with-you">
+		<section id="quote" class="section home-with-you">
 			<div class="container-fluid">
 				<div class="row align-items-center justify-content-md-center">
 					<div class="home-with-you-content align-items-center">
@@ -99,7 +130,7 @@
 				<div class="picture picture-2 hidden-sm-down" data-bottom-top="transform: translateY(5%);" data-top-bottom="transform: translateY(-20%);">
 					<img class="img-fluid" src="assets/img/special-day-picture-2.jpg"> </div>
 				<div class="picture picture-3" data-bottom-top="transform: translateY(5%);" data-top-bottom="transform: translateY(-22%);">
-					<div class="square"></div>
+					<div class="square" data-center-top="opacity:0; transform: translateY(0%);" data-bottom-top="opacity:1; transform: translateY(-5%);"></div>
 					<img class="img-fluid" src="assets/img/special-day-picture-3.jpg">
 				</div>
 			</div>
@@ -158,7 +189,7 @@
 									would like to get us something, you can find some ideas here:</p>
 								<p> <a href="https://www.regalanovios.com/listas/ver/1613" target="_blank" class="button" rel="nofollow">Chile</a>
 									<a href="https://honeypotregistry.co.nz/Registry/Live/f2e62d5f-97d5-4cbf-9ce0-c4559c425d03" target="_blank" class="button"
-									 rel="nofollow">New Zealand</a>
+									    rel="nofollow">New Zealand</a>
 								</p>
 							</div>
 						</section>
@@ -219,7 +250,7 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-	 crossorigin="anonymous"></script>
+	    crossorigin="anonymous"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
